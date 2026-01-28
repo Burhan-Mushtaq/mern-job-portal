@@ -1,15 +1,18 @@
 import {BrowserRouter , Routes , Route , Navigate} from "react-router-dom";
 
-function Login(){
-  return <h2>Login Page</h2>;
-}
+import Login from "./pages/login";
+import Register from "./pages/register";
+import Jobs from "./pages/jobs";
+import CreateJob from "./pages/createJob";
 
 function App() {
   return (
       <BrowserRouter>
          <Routes>
-            <Route path="/" element={<h1>Home</h1>}/>    
+            <Route path="/" element={<Jobs />}/>    
             <Route path="/login" element={<Login />} />        
+            <Route path="/register" element={<Register />} />   
+            <Route path="/create-job" element={< CreateJob />} />     
          </Routes>
          </BrowserRouter>
   );
