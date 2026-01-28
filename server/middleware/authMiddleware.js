@@ -1,7 +1,8 @@
 import jwt from "jsonwebtoken";
+import User from "../models/user.js";
 
 
-export const protect = (req,res,next) =>{
+export const protect = async (req,res,next) =>{
     let token;
 
     if(
@@ -18,9 +19,11 @@ export const protect = (req,res,next) =>{
 
     try{
         const decoded = jwt.verify(token , process.env.JWT_SECRET);
-        req.user = decoded;
+        req.user = await User.findById(decoded.id).select("-password") ;
         next();
     }catch (error){
         return res.status(401).json({message: "Token Failed"});
     }
 };
+
+export default protect;
