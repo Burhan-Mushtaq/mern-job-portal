@@ -9,7 +9,7 @@ const PublicRoutes = ({ children }) =>{
     }
 
     if(user){
-        return <Navigate to="/jobs" />
+        return <Navigate to="/home" />
     }
 
     return children;

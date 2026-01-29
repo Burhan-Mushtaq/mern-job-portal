@@ -1,20 +1,27 @@
 import {BrowserRouter , Routes , Route , Navigate} from "react-router-dom";
 
+import Navbar from "./components/navbar";
+
 import Login from "./pages/login";
 import Register from "./pages/register";
-import Jobs from "./pages/jobs";
+import Home from "./pages/home";
 import CreateJob from "./pages/createJob";
 import ProtectedRoutes from "./routes/protectedRoute";
-import PublicRoutes from "./routes/publicRoute"
+import PublicRoutes from "./routes/publicRoute";
+import RecruiterRoutes from "./routes/recruiterRoute";
 
 function App() {
   return (
       <BrowserRouter>
+      <Navbar />
+
+      <div className="max-w-6xl mx-auto p-6">
+
          <Routes>
-            <Route path="/jobs"
+            <Route path="/home"
              element={
-               <ProtectedRoutes>
-                  <Jobs />
+                <ProtectedRoutes>
+                  <Home />
                </ProtectedRoutes>
              }/>    
 
@@ -26,9 +33,18 @@ function App() {
                   }/>   
 
             <Route path="/register" element={<Register />} />   
-            <Route path="/create-job" element={< CreateJob />} />     
+
+            <Route path="/create-job" 
+            element={
+               <RecruiterRoutes>
+                  < CreateJob />
+               </RecruiterRoutes>
+               
+                }/>     
          </Routes>
-         </BrowserRouter>
+      </div>
+      </BrowserRouter>
+
   );
 }
 

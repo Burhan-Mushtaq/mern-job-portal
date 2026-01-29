@@ -13,10 +13,13 @@ export const AuthProvider = ({ children}) => {
         setUser(res.data.user);
     };
 
+    const register = async (name , email , password , role) =>{
+        const res = await API.post("/auth/register",{name,email,password,role});
+    }
+
     const logout = () => {
         setUser(null);
         localStorage.removeItem("token");
-
     };
     useEffect(() =>{
         const token = localStorage.getItem("token");
@@ -39,7 +42,7 @@ export const AuthProvider = ({ children}) => {
     }, []);
 
     return(
-        <AuthContext.Provider value={{user, login , logout, loading}}>
+        <AuthContext.Provider value={{user, login , logout, register, loading}}>
             {children}
         </AuthContext.Provider>
     );
