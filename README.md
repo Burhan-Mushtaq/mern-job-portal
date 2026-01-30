@@ -127,6 +127,6 @@ Pagination
 
 Resume upload
 
-🧑‍💻 Author
-Burhan Mushtaq
+🧑‍💻 Author : 
+Burhan Mushtaq :
 (MERN STACK Developer || Programmer )
