@@ -80,7 +80,7 @@ MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 
 🚀 Installation & Setup
-1️⃣ Clone the repository
+1️⃣ Clone the repository 
 git clone https://github.com/burhan-mushtaq/mern-job-portal.git
 
 2️⃣ Backend setup
