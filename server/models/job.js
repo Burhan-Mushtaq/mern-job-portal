@@ -5,13 +5,21 @@ const jobSchema = new mongoose.Schema(
         title: {
             type: String,
             required: true,
+            trim: true,
         },
         company: {
             type: String,
             required: true,
+            trim: true,
         },
         location : {
             type: String,
+            required: true,
+        },
+        jobtype:{
+            type: String,
+            enum: ["full-time", "part-time", "internship" , "contract"],
+            required: true,
         },
         description: {
             type: String,

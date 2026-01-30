@@ -5,7 +5,7 @@ const Navbar = () =>{
     const {user , logout }= useAuth();
 
     return(
-        <nav className="bg-slate-900 text-white px-6 py-4 flex justify-between items-center">
+        <nav className="sticky top-0 z-50 bg-slate-900 text-white px-6 py-4 flex justify-between items-center">
             <Link to="/home" className="text-xl font-bold">
             MERN Jobs
             </Link>

@@ -16,7 +16,7 @@ export const createJob = async (req ,res) =>{
 
 export const getAllJobs = async (req,res)=>{
     try{
-        const jobs = await Job.find().populate("CreatedBy", "name email");
+        const jobs = await Job.find().populate("createdBy", "name email");
         res.json(jobs);
     }catch(error){
         res.status(500).json({message : "Failed to fetch Jobs"});
