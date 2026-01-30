@@ -72,26 +72,6 @@ Mongoose
 
 JWT Authentication
 
-📂 Project Structure
-mern-job-portal
-│
-├── client
-│   ├── src
-│   │   ├── components
-│   │   ├── pages
-│   │   ├── context
-│   │   ├── services
-│   │   └── App.jsx
-│
-├── server
-│   ├── controllers
-│   ├── models
-│   ├── routes
-│   ├── middleware
-│   └── server.js
-│
-└── README.md
-
 ⚙️ Environment Variables
 
 Create a .env file in the server folder:
@@ -150,6 +130,3 @@ Resume upload
 🧑‍💻 Author
 Burhan Mushtaq
 (MERN STACK Developer || Programmer )
-
-Burhan Mushtaq
-MERN Stack Developer
